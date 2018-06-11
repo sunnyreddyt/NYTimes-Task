@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.sarveshwar.nytimes.Activities.SearchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_170sdp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Newyork Times API"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:theme="@style/EditTextHint">
+
+            <EditText
+                android:id="@+id/etQuery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search"
+                android:inputType="text"
+                android:maxLength="30"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="#70FFFFFF"
+                android:textSize="@dimen/_12sdp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="#989898"
+                android:onClick="onArticleSearch"
+                android:text="@string/search"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp" />
+
+            <Button
+                android:id="@+id/btnFilter"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:background="#989898"
+                android:onClick="onFilter"
+                android:text="Filter"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical">
+
+
+        <GridView
+            android:id="@+id/gvResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numColumns="2" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
